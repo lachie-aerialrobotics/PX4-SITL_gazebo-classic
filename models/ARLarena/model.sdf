@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+    <model name="ARLarena">
+      <static>true</static>
+      <link name="arena">
+      <pose>2 -4 0.4 0 0 3.141</pose>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+            <uri>model://ARLarena/meshes/FoamBoardWithHoles.stl</uri>
+            <scale> 1 1 1 </scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+            <uri>model://ARLarena/meshes/FoamBoardWithHoles.stl</uri>
+            <scale> 1 1 1 </scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+      <static>true</static>
+      <link name="board">
+      <pose>0 0 0.1 0 0 0</pose>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+            <uri>model://ARLarena/meshes/ARLarena.stl</uri>
+            </mesh>
+          </geometry>
+          <transparency>0.5</transparency>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+            <uri>model://ARLarena/meshes/ARLarena.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+</sdf>

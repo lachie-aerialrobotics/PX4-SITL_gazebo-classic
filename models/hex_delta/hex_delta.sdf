@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name='hex_delta'>
+    <include>
+      <uri>model://delta_robot</uri>
+      <pose>0.31 0 0.3 1.5708 0 1.5708</pose>
+    </include>
+    <joint name="manipulator_joint" type="fixed">
+      <parent>delta_robot::base_link</parent>
+      <child>hex::base_link</child>
+    </joint>
+    <include>
+      <uri>model://hex</uri>
+    </include>
+  </model>
+</sdf>
