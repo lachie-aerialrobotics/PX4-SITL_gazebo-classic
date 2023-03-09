@@ -429,7 +429,7 @@ ROTOR_IZZ = ROTOR_IYY
     <link name='/imu_link'>
     <pose>0 0 0 0 0 0</pose>
     <inertial>
-      <pose>0 0 0 0 0 0</pose>
+    <pose>0 0 <%= COM_Z_OFFSET %> 0 0 0</pose>
       <mass>0.015</mass>
       <inertia>
         <ixx>1e-05</ixx>
@@ -441,7 +441,7 @@ ROTOR_IZZ = ROTOR_IYY
       </inertia>
     </inertial>
   </link>
-  <joint name='imu_joint' type='revolute'>
+  <joint name='/imu_link' type='revolute'>
     <child>imu::link</child>
     <parent>base_link</parent>
     <axis>

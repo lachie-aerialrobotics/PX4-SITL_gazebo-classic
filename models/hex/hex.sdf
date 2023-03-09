@@ -1,4 +1,3 @@
-
 <sdf version='1.7'>
   <model name='hex'>
     <link name='base_link'>
@@ -30,9 +29,6 @@
             <name>Gazebo/DarkGrey</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
           <ambient>0.175 0.175 0.175 1</ambient>
           <diffuse>0.175 0.175 0.175 1</diffuse>
           <specular>0.175 0.175 0.175 1</specular>
@@ -90,9 +86,6 @@
             <name>Gazebo/Blue</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
           <ambient>0 0 1 1</ambient>
           <diffuse>0 0 1 1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
@@ -151,9 +144,6 @@
             <name>Gazebo/Blue</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
           <ambient>0 0 1 1</ambient>
           <diffuse>0 0 1 1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
@@ -192,9 +182,6 @@
             <name>Gazebo/Blue</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
           <ambient>0 0 1 1</ambient>
           <diffuse>0 0 1 1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
@@ -253,9 +240,6 @@
             <name>Gazebo/Blue</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
           <ambient>0 0 1 1</ambient>
           <diffuse>0 0 1 1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
@@ -294,9 +278,6 @@
             <name>Gazebo/Blue</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
           <ambient>0 0 1 1</ambient>
           <diffuse>0 0 1 1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
@@ -355,9 +336,6 @@
             <name>Gazebo/Blue</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
           <ambient>0 0 1 1</ambient>
           <diffuse>0 0 1 1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
@@ -370,7 +348,7 @@
     <link name='/imu_link'>
     <pose>0 0 0 0 0 0</pose>
     <inertial>
-      <pose>0 0 0 0 0 0</pose>
+    <pose>0 0 0.185 0 0 0</pose>
       <mass>0.015</mass>
       <inertia>
         <ixx>1e-05</ixx>
@@ -383,7 +361,7 @@
     </inertial>
   </link>
   <joint name='imu_joint' type='revolute'>
-    <child>imu::link</child>
+    <child>/imu_link</child>
     <parent>base_link</parent>
     <axis>
       <xyz>1 0 0</xyz>
@@ -509,7 +487,6 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <allow_auto_disable>1</allow_auto_disable>
    <plugin name='0_motor_model' filename='libgazebo_motor_model.so'>
       <robotNamespace/>
       <jointName>rotor_0_joint</jointName>
@@ -644,7 +621,7 @@
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
     </plugin>
     <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
-    <robotNamespace></robotNamespace>
+    <robotNamespace/>
     <imuSubTopic>/imu</imuSubTopic>
     <magSubTopic>/mag</magSubTopic>
     <baroSubTopic>/baro</baroSubTopic>
@@ -659,8 +636,11 @@
     <sdk_addr>INADDR_ANY</sdk_addr>
     <sdk_udp_port>14540</sdk_udp_port>
     <hil_mode>0</hil_mode>
-    <hil_state_level>false</hil_state_level>
-    <enable_lockstep>true</enable_lockstep>
+    <hil_state_level>0</hil_state_level>
+      <send_vision_estimation>0</send_vision_estimation>
+      <send_odometry>1</send_odometry>
+      <enable_lockstep>1</enable_lockstep>
+      <use_tcp>1</use_tcp>
     <use_tcp>true</use_tcp>
     <motorSpeedCommandPubTopic>/gazebo/command/motor_speed</motorSpeedCommandPubTopic>
       <control_channels>
