@@ -441,8 +441,8 @@ ROTOR_IZZ = ROTOR_IYY
       </inertia>
     </inertial>
   </link>
-  <joint name='/imu_link' type='revolute'>
-    <child>imu::link</child>
+  <joint name='imu_joint' type='revolute'>
+    <child>/imu_link</child>
     <parent>base_link</parent>
     <axis>
       <xyz>1 0 0</xyz>
