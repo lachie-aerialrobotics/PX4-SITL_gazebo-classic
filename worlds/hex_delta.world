@@ -18,7 +18,6 @@
     <include>
       <uri>model://sun</uri>
     </include>
-<<<<<<< HEAD:worlds/hex_delta.world
     <!-- A ground plane -->
     <include>
       <uri>model://ground_plane</uri>
@@ -26,9 +25,6 @@
     <include>
       <uri>model://asphalt_plane</uri>
     </include>
-=======
-
->>>>>>> e3722bf9132567e8dd08b7ed6df2986e21a6ec18:worlds/hitl_iris.world
     <physics name='default_physics' default='0' type='ode'>
       <gravity>0 0 -9.8066</gravity>
       <ode>
