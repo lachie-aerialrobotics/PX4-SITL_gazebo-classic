@@ -8,7 +8,8 @@
         <visual name="visual">
           <geometry>
             <mesh>
-            <uri>model://ARLarena/meshes/FoamBoardWithHoles.stl</uri>
+            <!-- <uri>model://ARLarena/meshes/FoamBoardWithHoles.stl</uri> -->
+            <uri>model://ARLarena/meshes/PrintBoard.stl</uri>
             <scale> 1 1 1 </scale>
             </mesh>
           </geometry>
@@ -16,7 +17,8 @@
         <collision name="collision">
           <geometry>
             <mesh>
-            <uri>model://ARLarena/meshes/FoamBoardWithHoles.stl</uri>
+            <!-- <uri>model://ARLarena/meshes/FoamBoardWithHoles.stl</uri> -->
+            <uri>model://ARLarena/meshes/PrintBoard.stl</uri>
             <scale> 1 1 1 </scale>
             </mesh>
           </geometry>
