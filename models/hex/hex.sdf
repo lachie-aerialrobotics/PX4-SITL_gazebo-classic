@@ -7,12 +7,12 @@
         <pose>0 0 0 0 0 0</pose>
         <mass>12</mass>
         <inertia>
-          <ixx>1.99992</ixx>
+          <ixx>0.2899999884</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.99992</iyy>
+          <iyy>0.2899999884</iyy>
           <iyz>0</iyz>
-          <izz>1.99992</izz>
+          <izz>0.49999998</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
@@ -65,14 +65,14 @@
       <pose>0.2021534554521046 -0.3509401379847765 0.245 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>0.027439999999999992</mass>
+        <mass>0.047</mass>
         <inertia>
-          <ixx>5.243783999999998e-06</ixx>
+          <ixx>1.0183332926000001e-05</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.014688188569599995</iyy>
+          <iyy>0.00101114229288764</iyy>
           <iyz>0</iyz>
-          <izz>0.014688188569599995</izz>
+          <izz>0.00102054229251164</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
@@ -126,14 +126,14 @@
       <pose>0.2021534554521046 -0.3509401379847765 0.125 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>0.027439999999999992</mass>
+        <mass>0.047</mass>
         <inertia>
-          <ixx>5.243783999999998e-06</ixx>
+          <ixx>1.0183332926000001e-05</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.014688188569599995</iyy>
+          <iyy>0.00101114229288764</iyy>
           <iyz>0</iyz>
-          <izz>0.014688188569599995</izz>
+          <izz>0.00102054229251164</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
@@ -167,14 +167,14 @@
       <pose>-0.40499992887425096 0.00024002468981527882 0.245 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>0.027439999999999992</mass>
+        <mass>0.047</mass>
         <inertia>
-          <ixx>5.243783999999998e-06</ixx>
+          <ixx>1.0183332926000001e-05</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.014688188569599995</iyy>
+          <iyy>0.00101114229288764</iyy>
           <iyz>0</iyz>
-          <izz>0.014688188569599995</izz>
+          <izz>0.00102054229251164</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
@@ -228,14 +228,14 @@
       <pose>-0.40499992887425096 0.00024002468981527882 0.125 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>0.027439999999999992</mass>
+        <mass>0.047</mass>
         <inertia>
-          <ixx>5.243783999999998e-06</ixx>
+          <ixx>1.0183332926000001e-05</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.014688188569599995</iyy>
+          <iyy>0.00101114229288764</iyy>
           <iyz>0</iyz>
-          <izz>0.014688188569599995</izz>
+          <izz>0.00102054229251164</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
@@ -269,14 +269,14 @@
       <pose>0.2025692852118133 0.3507002775715683 0.245 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>0.027439999999999992</mass>
+        <mass>0.047</mass>
         <inertia>
-          <ixx>5.243783999999998e-06</ixx>
+          <ixx>1.0183332926000001e-05</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.014688188569599995</iyy>
+          <iyy>0.00101114229288764</iyy>
           <iyz>0</iyz>
-          <izz>0.014688188569599995</izz>
+          <izz>0.00102054229251164</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
@@ -330,14 +330,14 @@
       <pose>0.2025692852118133 0.3507002775715683 0.125 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>0.027439999999999992</mass>
+        <mass>0.047</mass>
         <inertia>
-          <ixx>5.243783999999998e-06</ixx>
+          <ixx>1.0183332926000001e-05</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.014688188569599995</iyy>
+          <iyy>0.00101114229288764</iyy>
           <iyz>0</iyz>
-          <izz>0.014688188569599995</izz>
+          <izz>0.00102054229251164</izz>
         </inertia>
       </inertial>
       <gravity>1</gravity>
@@ -517,9 +517,9 @@
       <turningDirection>cw</turningDirection>
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
-      <maxRotVelocity>590</maxRotVelocity>
-      <motorConstant>0.00010875</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <maxRotVelocity>650</maxRotVelocity>
+      <motorConstant>6.542e-05</motorConstant>
+      <momentConstant>0.2155</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>0</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
@@ -534,9 +534,9 @@
       <turningDirection>ccw</turningDirection>
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
-      <maxRotVelocity>590</maxRotVelocity>
-      <motorConstant>0.00010875</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <maxRotVelocity>650</maxRotVelocity>
+      <motorConstant>6.542e-05</motorConstant>
+      <momentConstant>0.2155</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>1</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
@@ -551,9 +551,9 @@
       <turningDirection>cw</turningDirection>
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
-      <maxRotVelocity>590</maxRotVelocity>
-      <motorConstant>0.00010875</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <maxRotVelocity>650</maxRotVelocity>
+      <motorConstant>6.542e-05</motorConstant>
+      <momentConstant>0.2155</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>2</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
@@ -568,9 +568,9 @@
       <turningDirection>ccw</turningDirection>
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
-      <maxRotVelocity>590</maxRotVelocity>
-      <motorConstant>0.00010875</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <maxRotVelocity>650</maxRotVelocity>
+      <motorConstant>6.542e-05</motorConstant>
+      <momentConstant>0.2155</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>3</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
@@ -585,9 +585,9 @@
       <turningDirection>cw</turningDirection>
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
-      <maxRotVelocity>590</maxRotVelocity>
-      <motorConstant>0.00010875</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <maxRotVelocity>650</maxRotVelocity>
+      <motorConstant>6.542e-05</motorConstant>
+      <momentConstant>0.2155</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>4</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
@@ -602,9 +602,9 @@
       <turningDirection>ccw</turningDirection>
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
-      <maxRotVelocity>590</maxRotVelocity>
-      <motorConstant>0.00010875</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <maxRotVelocity>650</maxRotVelocity>
+      <motorConstant>6.542e-05</motorConstant>
+      <momentConstant>0.2155</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>5</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
@@ -644,7 +644,7 @@
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
     </plugin>
     <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
-    <robotNamespace></robotNamespace>
+    <robotNamespace/>
     <imuSubTopic>/imu</imuSubTopic>
     <magSubTopic>/mag</magSubTopic>
     <baroSubTopic>/baro</baroSubTopic>
@@ -660,6 +660,8 @@
     <sdk_udp_port>14540</sdk_udp_port>
     <hil_mode>0</hil_mode>
     <hil_state_level>false</hil_state_level>
+    <send_vision_estimation>0</send_vision_estimation>
+    <send_odometry>1</send_odometry>
     <enable_lockstep>true</enable_lockstep>
     <use_tcp>true</use_tcp>
     <motorSpeedCommandPubTopic>/gazebo/command/motor_speed</motorSpeedCommandPubTopic>
@@ -731,12 +733,12 @@
 
 
   <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
-    <alwaysOn>true</alwaysOn>
+  <robotNamespace/>
     <updateRate>100.0</updateRate>
     <bodyName>base_link</bodyName>
-    <topicName>ground_truth/hex</topicName>
-    <gaussianNoise>0.01</gaussianNoise>
+    <topicName>mavros/odometry/out</topicName>
     <frameName>map</frameName>
+    <gaussianNoise>0.03</gaussianNoise>
     <xyzOffsets>0 0 0</xyzOffsets>
     <rpyOffsets>0 0 0</rpyOffsets>
   </plugin>

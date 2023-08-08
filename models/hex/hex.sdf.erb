@@ -1,15 +1,24 @@
 <%
+def box_inertia(x, y, z, mass)
+  ixx = 0.08333333 * mass * (y**2 + z**2)
+  iyy = 0.08333333 * mass * (x**2 + z**2)
+  izz = 0.08333333 * mass * (x**2 + y**2)
+  return ixx, iyy, izz
+end
+
+
 ROTOR_SCALE = 1.4
 
 # MOTOR_CONSTANT = 8.54858e-06*4
-MOTOR_CONSTANT = 1.45e-04 * 0.75
-MOMENT_CONSTANT = 0.06
+# MOTOR_CONSTANT = 1.45e-04 * 0.75
+MOTOR_CONSTANT = 0.00006542 #Thrust = MOTOR_CONSTANT * (INPUT_SCALING * SIGNAL[0,1])**2
+MOMENT_CONSTANT = 0.2155 #Moment = MOMENT_CONSTANT * THRUST
 # MOMENT_CONSTANT = 0.022
 ROTOR_VELOCITY_SLOWDOWN_SIM = 10
 INPUT_SCALING = 1000
 DRAG_COEFF = 0.000175
 ROLLING_MOMENT_COEFF = 1e-06
-MAX_ROT_VEL = 590
+MAX_ROT_VEL = 650
 
 COM_Z_OFFSET = 0.37 * 0.5
 
@@ -48,15 +57,18 @@ ROTOR_5_POSE_Y = ROTOR_RADIUS * Math.sin(ROTOR_5_ANGLE)
 ROTOR_5_POSE_Z = -ROTOR_Z_OFFSET + COM_Z_OFFSET
 
 BASE_MASS = 12
-BASE_EQUIV_WIDTH = 1.0
-BASE_IXX  = 0.08333 * BASE_MASS * (2 * BASE_EQUIV_WIDTH**2)
-BASE_IYY  = BASE_IXX
-BASE_IZZ  = BASE_IXX
+BASE_IXX, BASE_IYY, BASE_IZZ = box_inertia(0.5, 0.5, 0.2, BASE_MASS)
+# BASE_IXX  = 0.08333 * BASE_MASS * (2 * BASE_EQUIV_WIDTH**2)
+# BASE_IYY  = BASE_IXX
+# BASE_IZZ  = BASE_IXX
 
-ROTOR_MASS = 0.01 * ROTOR_SCALE**3
-ROTOR_IXX = 9.75e-7 * ROTOR_SCALE**5
-ROTOR_IYY = 0.000273104 * ROTOR_SCALE**5 * 10
-ROTOR_IZZ = ROTOR_IYY
+# ROTOR_MASS = 0.01 * ROTOR_SCALE**3
+ROTOR_MASS = 0.047
+ROTOR_IXX, ROTOR_IYY, ROTOR_IZZ = box_inertia(0.508, 0.05, 0.01, ROTOR_MASS)
+
+# ROTOR_IXX = 9.75e-7 * ROTOR_SCALE**5
+# ROTOR_IYY = 0.000273104 * ROTOR_SCALE**5 * 10
+# ROTOR_IZZ = ROTOR_IYY
 %>
 <sdf version='1.7'>
   <model name='hex'>
@@ -703,7 +715,7 @@ ROTOR_IZZ = ROTOR_IYY
       <rotorVelocitySlowdownSim><%= ROTOR_VELOCITY_SLOWDOWN_SIM %></rotorVelocitySlowdownSim>
     </plugin>
     <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
-    <robotNamespace></robotNamespace>
+    <robotNamespace/>
     <imuSubTopic>/imu</imuSubTopic>
     <magSubTopic>/mag</magSubTopic>
     <baroSubTopic>/baro</baroSubTopic>
@@ -719,6 +731,8 @@ ROTOR_IZZ = ROTOR_IYY
     <sdk_udp_port>14540</sdk_udp_port>
     <hil_mode>0</hil_mode>
     <hil_state_level>false</hil_state_level>
+    <send_vision_estimation>0</send_vision_estimation>
+    <send_odometry>1</send_odometry>
     <enable_lockstep>true</enable_lockstep>
     <use_tcp>true</use_tcp>
     <motorSpeedCommandPubTopic>/gazebo/command/motor_speed</motorSpeedCommandPubTopic>
@@ -790,12 +804,12 @@ ROTOR_IZZ = ROTOR_IYY
 
 
   <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
-    <alwaysOn>true</alwaysOn>
+  <robotNamespace/>
     <updateRate>100.0</updateRate>
     <bodyName>base_link</bodyName>
-    <topicName>ground_truth/hex</topicName>
-    <gaussianNoise>0.01</gaussianNoise>
+    <topicName>mavros/odometry/out</topicName>
     <frameName>map</frameName>
+    <gaussianNoise>0.03</gaussianNoise>
     <xyzOffsets>0 0 0</xyzOffsets>
     <rpyOffsets>0 0 0</rpyOffsets>
   </plugin>

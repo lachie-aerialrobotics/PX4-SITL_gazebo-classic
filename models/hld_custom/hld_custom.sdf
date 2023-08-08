@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name='hld'>
+    <include>
+      <uri>model://hld</uri>
+      <pose>0.1 0 0.1 1.5708 0 1.5708</pose>
+    </include>
+    <joint name="manipulator_joint" type="fixed">
+      <parent>hld::base_link</parent>
+      <child>hld_drone::base_link</child>
+    </joint>
+    <include>
+      <uri>model://hld_drone</uri>
+    </include>
+  </model>
+</sdf>

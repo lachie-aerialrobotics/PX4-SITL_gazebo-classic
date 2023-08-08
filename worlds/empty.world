@@ -12,6 +12,23 @@
     <include>
       <uri>model://asphalt_plane</uri>
     </include>
+    <!-- <plugin name='wind_plugin' filename='libgazebo_wind_plugin.so'>
+      <frameId>base_link</frameId>
+      <robotNamespace/>
+      <windVelocityMean>6</windVelocityMean>
+      <windVelocityMax>25</windVelocityMax>
+      <windVelocityVariance>0</windVelocityVariance>
+      <windDirectionMean>0 1 0</windDirectionMean>
+      <windDirectionVariance>0</windDirectionVariance>
+      <windGustStart>80</windGustStart>
+      <windGustDuration>10</windGustDuration>
+      <windGustVelocityMean>10</windGustVelocityMean>
+      <windGustVelocityMax>16</windGustVelocityMax>
+      <windGustVelocityVariance>0</windGustVelocityVariance>
+      <windGustDirectionMean>0 1 0</windGustDirectionMean>
+      <windGustDirectionVariance>0</windGustDirectionVariance>
+      <windPubTopic>world_wind</windPubTopic>
+    </plugin> -->
     <physics name='default_physics' default='0' type='ode'>
       <gravity>0 0 -9.8066</gravity>
       <ode>
